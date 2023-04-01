@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="16" failures="0" time="2.421">
+  <testsuite name="Landing Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-03-31T06:13:54" time="0.88" tests="4">
+    <testcase classname="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" name="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" time="0.049">
+    </testcase>
+    <testcase classname="Landing Page Tests Catches error and returns null, if fetch call fails " name="Landing Page Tests Catches error and returns null, if fetch call fails " time="0.021">
+    </testcase>
+    <testcase classname="Landing Page Tests Adds a new City - London" name="Landing Page Tests Adds a new City - London" time="0.022">
+    </testcase>
+    <testcase classname="Landing Page Tests Correctly links City Card to Adventures page" name="Landing Page Tests Correctly links City Card to Adventures page" time="0.014">
+    </testcase>
+  </testsuite>
+  <testsuite name="Adventure Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-03-31T06:13:54" time="1.233" tests="12">
+    <testcase classname="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" name="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" time="0.069">
+    </testcase>
+    <testcase classname="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" name="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" time="0.032">
+    </testcase>
+    <testcase classname="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" name="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" time="0.052">
+    </testcase>
+    <testcase classname="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" name="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" time="0.116">
+    </testcase>
+    <testcase classname="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" name="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" time="0.04">
+    </testcase>
+    <testcase classname="Adventure Page Tests filterByDuration() - Returns an array of adventures, filtered by duration" name="Adventure Page Tests filterByDuration() - Returns an array of adventures, filtered by duration" time="0.014">
+    </testcase>
+    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" time="0.013">
+    </testcase>
+    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" time="0.01">
+    </testcase>
+    <testcase classname="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" name="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" time="0.013">
+    </testcase>
+    <testcase classname="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" name="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" time="0.011">
+    </testcase>
+    <testcase classname="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" name="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" time="0.016">
+    </testcase>
+    <testcase classname="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" name="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" time="0.035">
+    </testcase>
+  </testsuite>
+</testsuites>
