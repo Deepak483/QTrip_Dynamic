@@ -4,7 +4,8 @@ import config from "../conf/index.js";
 function getAdventureIdFromURL(search) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Get the Adventure Id from the URL
-  
+  let url = new URLSearchParams(search);
+  return url.get("adventure");
   // Place holder for functionality to work in the Stubs
   return null;
 }
@@ -12,7 +13,15 @@ function getAdventureIdFromURL(search) {
 async function fetchAdventureDetails(adventureId) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Fetch the details of the adventure by making an API call
-
+  try {
+    const fetchAdventureDetail = await fetch(
+      config.backendEndpoint + `/adventures/detail?adventure=${adventureId}`
+    );
+    const jsonResponse = await fetchAdventureDetail.json();
+    return jsonResponse;
+  } catch (error) {
+    return null;
+  }
   // Place holder for functionality to work in the Stubs
   return null;
 }
@@ -21,6 +30,25 @@ async function fetchAdventureDetails(adventureId) {
 function addAdventureDetailsToDOM(adventure) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Add the details of the adventure to the HTML DOM
+
+  // Get the HTML elements to insert the adventure details
+  const nameEl = document.getElementById("adventure-name");
+  const subtitleEl = document.getElementById("adventure-subtitle");
+  const contentEl = document.getElementById("adventure-content");
+  const photoGalleryEl = document.getElementById("photo-gallery");
+
+  // Insert the adventure details into the DOM
+  nameEl.textContent = adventure.name;
+  subtitleEl.textContent = adventure.subtitle;
+  contentEl.textContent = adventure.content;
+
+  // Insert the images into the photo-gallery
+  adventure.images.forEach((image) => {
+    const imageEl = document.createElement("div");
+    imageEl.classList.add("activity-card-image");
+    imageEl.style.backgroundImage = `url(${image})`;
+    photoGalleryEl.appendChild(imageEl);
+  });
 }
 
 //Implementation of bootstrap gallery component
