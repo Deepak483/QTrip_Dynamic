@@ -4,7 +4,7 @@ import config from "../conf/index.js";
 function getAdventureIdFromURL(search) {
   // TODO: MODULE_ADVENTURE_DETAILS
   // 1. Get the Adventure Id from the URL
-
+  
   // Place holder for functionality to work in the Stubs
   return null;
 }
