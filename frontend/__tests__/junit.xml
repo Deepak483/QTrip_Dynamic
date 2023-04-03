@@ -1,61 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="21" failures="1" time="2.067">
-  <testsuite name="Adventure Detail Page Tests" errors="0" failures="1" skipped="0" timestamp="2023-04-02T18:29:04" time="0.827" tests="5">
-    <testcase classname="Adventure Detail Page Tests Extract city from URL Params" name="Adventure Detail Page Tests Extract city from URL Params" time="0.049">
+<testsuites name="jest tests" tests="21" failures="0" time="1.43">
+  <testsuite name="Adventure Detail Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-02T20:03:25" time="0.606" tests="5">
+    <testcase classname="Adventure Detail Page Tests Extract city from URL Params" name="Adventure Detail Page Tests Extract city from URL Params" time="0.04">
     </testcase>
-    <testcase classname="Adventure Detail Page Tests Check if fetch call for the adventure details was made and data was received" name="Adventure Detail Page Tests Check if fetch call for the adventure details was made and data was received" time="0.017">
+    <testcase classname="Adventure Detail Page Tests Check if fetch call for the adventure details was made and data was received" name="Adventure Detail Page Tests Check if fetch call for the adventure details was made and data was received" time="0.015">
     </testcase>
-    <testcase classname="Adventure Detail Page Tests Catches errors and returns null" name="Adventure Detail Page Tests Catches errors and returns null" time="0.022">
+    <testcase classname="Adventure Detail Page Tests Catches errors and returns null" name="Adventure Detail Page Tests Catches errors and returns null" time="0.013">
     </testcase>
-    <testcase classname="Adventure Detail Page Tests Tries adding a Adventure Details - Park" name="Adventure Detail Page Tests Tries adding a Adventure Details - Park" time="0.015">
+    <testcase classname="Adventure Detail Page Tests Tries adding a Adventure Details - Park" name="Adventure Detail Page Tests Tries adding a Adventure Details - Park" time="0.013">
     </testcase>
-    <testcase classname="Adventure Detail Page Tests Check if bootstrap gallery is working" name="Adventure Detail Page Tests Check if bootstrap gallery is working" time="0.017">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: 5
-Received: 0
-    at Object.&lt;anonymous&gt; (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/modules/adventure_details_page.test.js:106:69)
-    at Object.asyncJestTest (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
-    at /home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/node_modules/jest-jasmine2/build/queueRunner.js:45:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/node_modules/jest-jasmine2/build/queueRunner.js:28:19)
-    at /home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/node_modules/jest-jasmine2/build/queueRunner.js:75:41</failure>
+    <testcase classname="Adventure Detail Page Tests Check if bootstrap gallery is working" name="Adventure Detail Page Tests Check if bootstrap gallery is working" time="0.018">
     </testcase>
   </testsuite>
-  <testsuite name="Adventure Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-02T18:29:05" time="0.291" tests="12">
-    <testcase classname="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" name="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" time="0.015">
+  <testsuite name="Adventure Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-02T20:03:26" time="0.232" tests="12">
+    <testcase classname="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" name="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" time="0.013">
     </testcase>
-    <testcase classname="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" name="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" time="0.024">
+    <testcase classname="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" name="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" time="0.011">
     </testcase>
-    <testcase classname="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" name="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" time="0.012">
+    <testcase classname="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" name="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" time="0.014">
     </testcase>
-    <testcase classname="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" name="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" time="0.015">
+    <testcase classname="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" name="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" time="0.01">
     </testcase>
-    <testcase classname="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" name="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" time="0.014">
+    <testcase classname="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" name="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" time="0.01">
     </testcase>
-    <testcase classname="Adventure Page Tests filterByDuration() - Returns an array of adventures, filtered by duration" name="Adventure Page Tests filterByDuration() - Returns an array of adventures, filtered by duration" time="0.015">
+    <testcase classname="Adventure Page Tests filterByDuration() - Returns an array of adventures, filtered by duration" name="Adventure Page Tests filterByDuration() - Returns an array of adventures, filtered by duration" time="0.008">
     </testcase>
-    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" time="0.012">
+    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" time="0.007">
     </testcase>
-    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" time="0.008">
+    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" time="0.01">
     </testcase>
-    <testcase classname="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" name="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" time="0.008">
+    <testcase classname="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" name="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" time="0.006">
     </testcase>
-    <testcase classname="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" name="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" time="0.007">
+    <testcase classname="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" name="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" time="0.006">
     </testcase>
-    <testcase classname="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" name="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" time="0.009">
+    <testcase classname="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" name="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" time="0.007">
     </testcase>
-    <testcase classname="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" name="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" time="0.014">
+    <testcase classname="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" name="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" time="0.007">
     </testcase>
   </testsuite>
-  <testsuite name="Landing Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-02T18:29:06" time="0.208" tests="4">
-    <testcase classname="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" name="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" time="0.014">
+  <testsuite name="Landing Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-02T20:03:26" time="0.115" tests="4">
+    <testcase classname="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" name="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" time="0.009">
     </testcase>
-    <testcase classname="Landing Page Tests Catches error and returns null, if fetch call fails " name="Landing Page Tests Catches error and returns null, if fetch call fails " time="0.012">
+    <testcase classname="Landing Page Tests Catches error and returns null, if fetch call fails " name="Landing Page Tests Catches error and returns null, if fetch call fails " time="0.004">
     </testcase>
-    <testcase classname="Landing Page Tests Adds a new City - London" name="Landing Page Tests Adds a new City - London" time="0.005">
+    <testcase classname="Landing Page Tests Adds a new City - London" name="Landing Page Tests Adds a new City - London" time="0.004">
     </testcase>
-    <testcase classname="Landing Page Tests Correctly links City Card to Adventures page" name="Landing Page Tests Correctly links City Card to Adventures page" time="0.005">
+    <testcase classname="Landing Page Tests Correctly links City Card to Adventures page" name="Landing Page Tests Correctly links City Card to Adventures page" time="0.004">
     </testcase>
   </testsuite>
 </testsuites>
