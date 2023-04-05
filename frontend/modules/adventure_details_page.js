@@ -146,6 +146,7 @@ function addBootstrapPhotoGallery(images) {
 function conditionalRenderingOfReservationPanel(adventure) {
   // TODO: MODULE_RESERVATIONS
   // 1. If the adventure is already reserved, display the sold-out message.
+  if(adventure)
 }
 
 //Implementation of reservation cost calculation based on persons
