@@ -219,6 +219,12 @@ function captureFormSubmit(adventure) {
 function showBannerIfAlreadyReserved(adventure) {
   // TODO: MODULE_RESERVATIONS
   // 1. If user has already reserved this adventure, show the reserved-banner, else don't
+  const reservedBanner = document.getElementById("reserved-banner");
+  if (adventure.reserved) {
+    reservedBanner.style.display = "block";
+  } else {
+    reservedBanner.style.display = "none";
+  }
 }
 
 export {
