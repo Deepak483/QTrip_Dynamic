@@ -180,7 +180,7 @@ function captureFormSubmit(adventure) {
   // TODO: MODULE_RESERVATIONS
   // 1. Capture the query details and make a POST API call using fetch() to make the reservation
   // 2. If the reservation is successful, show an alert with "Success!" and refresh the page. If the reservation fails, just show an alert with "Failed!".
-  console.log(adventure);
+  // console.log(adventure);
   const myForm = document.getElementById("myForm");
   myForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -190,7 +190,7 @@ function captureFormSubmit(adventure) {
       person: myForm.elements["person"].value,
       adventure: adventure.id,
     };
-    console.log(formData);
+    // console.log(formData);
     try {
       const response = await fetch(
         `${config.backendEndpoint}/reservations/new`,

@@ -1,28 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="28" failures="3" time="2.311">
-  <testsuite name="Reservation Page Tests" errors="0" failures="3" skipped="0" timestamp="2023-04-05T09:45:54" time="0.824" tests="3">
-    <testcase classname="Reservation Page Tests Check if fetch call for the reservations was made and data was received" name="Reservation Page Tests Check if fetch call for the reservations was made and data was received" time="0.047">
-      <failure>Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)
-
-Expected number of calls: 1
-Received number of calls: 0
-    at Object.&lt;anonymous&gt; (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/modules/reservation_page.test.js:28:18)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+<testsuites name="jest tests" tests="28" failures="1" time="2.301">
+  <testsuite name="Landing Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-06T13:14:58" time="0.838" tests="4">
+    <testcase classname="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" name="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" time="0.052">
     </testcase>
-    <testcase classname="Reservation Page Tests Catches errors and returns null" name="Reservation Page Tests Catches errors and returns null" time="0.028">
-      <failure>Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)
-
-Expected number of calls: 1
-Received number of calls: 0
-    at Object.&lt;anonymous&gt; (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/modules/reservation_page.test.js:39:18)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
+    <testcase classname="Landing Page Tests Catches error and returns null, if fetch call fails " name="Landing Page Tests Catches error and returns null, if fetch call fails " time="0.027">
     </testcase>
-    <testcase classname="Reservation Page Tests Adding reservation to table" name="Reservation Page Tests Adding reservation to table" time="0.02">
-      <failure>Error: expect(received).toBe(expected) // Object.is equality
-
-Expected: &quot;none&quot;
-Received: &quot;&quot;
-    at Object.&lt;anonymous&gt; (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/modules/reservation_page.test.js:50:6)
+    <testcase classname="Landing Page Tests Adds a new City - London" name="Landing Page Tests Adds a new City - London" time="0.024">
+    </testcase>
+    <testcase classname="Landing Page Tests Correctly links City Card to Adventures page" name="Landing Page Tests Correctly links City Card to Adventures page" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="Adventure Detail Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-06T13:14:58" time="1.011" tests="9">
+    <testcase classname="Adventure Detail Page Tests Extract city from URL Params" name="Adventure Detail Page Tests Extract city from URL Params" time="0.065">
+    </testcase>
+    <testcase classname="Adventure Detail Page Tests Check if fetch call for the adventure details was made and data was received" name="Adventure Detail Page Tests Check if fetch call for the adventure details was made and data was received" time="0.027">
+    </testcase>
+    <testcase classname="Adventure Detail Page Tests Catches errors and returns null" name="Adventure Detail Page Tests Catches errors and returns null" time="0.023">
+    </testcase>
+    <testcase classname="Adventure Detail Page Tests Tries adding a Adventure Details - Park" name="Adventure Detail Page Tests Tries adding a Adventure Details - Park" time="0.017">
+    </testcase>
+    <testcase classname="Adventure Detail Page Tests Check if bootstrap gallery is working" name="Adventure Detail Page Tests Check if bootstrap gallery is working" time="0.051">
+    </testcase>
+    <testcase classname="Adventure Detail Page Tests Check if conditional rendering is working" name="Adventure Detail Page Tests Check if conditional rendering is working" time="0.043">
+    </testcase>
+    <testcase classname="Adventure Detail Page Tests Check if reservation cost is calculated correctly and updated in DOM" name="Adventure Detail Page Tests Check if reservation cost is calculated correctly and updated in DOM" time="0.022">
+    </testcase>
+    <testcase classname="Adventure Detail Page Tests Check if reservation banner is displayed" name="Adventure Detail Page Tests Check if reservation banner is displayed" time="0.025">
+    </testcase>
+    <testcase classname="Adventure Detail Page Tests captureFormSubmit() - Makes a POST API call with correct request body" name="Adventure Detail Page Tests captureFormSubmit() - Makes a POST API call with correct request body" time="0.046">
+    </testcase>
+  </testsuite>
+  <testsuite name="Reservation Page Tests" errors="0" failures="1" skipped="0" timestamp="2023-04-06T13:14:58" time="1.118" tests="3">
+    <testcase classname="Reservation Page Tests Check if fetch call for the reservations was made and data was received" name="Reservation Page Tests Check if fetch call for the reservations was made and data was received" time="0.169">
+    </testcase>
+    <testcase classname="Reservation Page Tests Catches errors and returns null" name="Reservation Page Tests Catches errors and returns null" time="0.015">
+    </testcase>
+    <testcase classname="Reservation Page Tests Adding reservation to table" name="Reservation Page Tests Adding reservation to table" time="0.055">
+      <failure>TypeError: Cannot read properties of null (reading &apos;children&apos;)
+    at map (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/modules/reservation_page.test.js:88:44)
+    at Array.map (&lt;anonymous&gt;)
+    at Object.&lt;anonymous&gt; (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/modules/reservation_page.test.js:87:17)
     at Object.asyncJestTest (/home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:106:37)
     at /home/deepaktiwari/QTrip_Project/QTrip_Dynamic_Project/frontend/__tests__/node_modules/jest-jasmine2/build/queueRunner.js:45:12
     at new Promise (&lt;anonymous&gt;)
@@ -31,60 +48,30 @@ Received: &quot;&quot;
     at processTicksAndRejections (node:internal/process/task_queues:95:5)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="Landing Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-05T09:45:54" time="0.831" tests="4">
-    <testcase classname="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" name="Landing Page Tests fetchCities() - Makes a fetch call for /cities API endpoint and returns an array with the cities data" time="0.054">
+  <testsuite name="Adventure Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-06T13:14:58" time="1.164" tests="12">
+    <testcase classname="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" name="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" time="0.123">
     </testcase>
-    <testcase classname="Landing Page Tests Catches error and returns null, if fetch call fails " name="Landing Page Tests Catches error and returns null, if fetch call fails " time="0.019">
+    <testcase classname="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" name="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" time="0.115">
     </testcase>
-    <testcase classname="Landing Page Tests Adds a new City - London" name="Landing Page Tests Adds a new City - London" time="0.015">
+    <testcase classname="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" name="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" time="0.042">
     </testcase>
-    <testcase classname="Landing Page Tests Correctly links City Card to Adventures page" name="Landing Page Tests Correctly links City Card to Adventures page" time="0.035">
+    <testcase classname="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" name="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" time="0.016">
     </testcase>
-  </testsuite>
-  <testsuite name="Adventure Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-05T09:45:54" time="1.093" tests="12">
-    <testcase classname="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" name="Adventure Page Tests getCityFromURL() - Extracts city from query parameter and return it" time="0.115">
-    </testcase>
-    <testcase classname="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" name="Adventure Page Tests fetchAdventures() - Makes a fetch call for /adventures API endpoint and returns an array with the adventures data" time="0.066">
-    </testcase>
-    <testcase classname="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" name="Adventure Page Tests fetchAdventures() - Catches errors and returns null, if fetch call fails" time="0.021">
-    </testcase>
-    <testcase classname="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" name="Adventure Page Tests addAdventureToDOM() - Adds a new Adventure with id value set to &lt;a&gt; tag" time="0.03">
-    </testcase>
-    <testcase classname="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" name="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" time="0.023">
+    <testcase classname="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" name="Adventure Page Tests addAdventureToDOM() - &lt;a&gt; tag links the adventure card correctly to the corresponding Adventure details page" time="0.015">
     </testcase>
     <testcase classname="Adventure Page Tests filterByDuration() - Returns an array of adventures, filtered by duration" name="Adventure Page Tests filterByDuration() - Returns an array of adventures, filtered by duration" time="0.013">
     </testcase>
-    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" time="0.012">
+    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by one category" time="0.013">
     </testcase>
-    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" time="0.009">
+    <testcase classname="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" name="Adventure Page Tests filterByCategory() - Returns an array of adventures, filtered by multiple categories" time="0.012">
     </testcase>
-    <testcase classname="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" name="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" time="0.014">
+    <testcase classname="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" name="Adventure Page Tests filterFunction() - Returns an array of adventures, filtered by both duration and categories" time="0.011">
     </testcase>
-    <testcase classname="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" name="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" time="0.018">
+    <testcase classname="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" name="Adventure Page Tests saveFiltersToLocalStorage() - Adds the updated filter as a string to localstorage" time="0.015">
     </testcase>
-    <testcase classname="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" name="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" time="0.026">
+    <testcase classname="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" name="Adventure Page Tests getFiltersFromLocalStorage() - Retrieves filters from local storage as an object" time="0.03">
     </testcase>
-    <testcase classname="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" name="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" time="0.011">
-    </testcase>
-  </testsuite>
-  <testsuite name="Adventure Detail Page Tests" errors="0" failures="0" skipped="0" timestamp="2023-04-05T09:45:54" time="1.287" tests="9">
-    <testcase classname="Adventure Detail Page Tests Extract city from URL Params" name="Adventure Detail Page Tests Extract city from URL Params" time="0.064">
-    </testcase>
-    <testcase classname="Adventure Detail Page Tests Check if fetch call for the adventure details was made and data was received" name="Adventure Detail Page Tests Check if fetch call for the adventure details was made and data was received" time="0.023">
-    </testcase>
-    <testcase classname="Adventure Detail Page Tests Catches errors and returns null" name="Adventure Detail Page Tests Catches errors and returns null" time="0.017">
-    </testcase>
-    <testcase classname="Adventure Detail Page Tests Tries adding a Adventure Details - Park" name="Adventure Detail Page Tests Tries adding a Adventure Details - Park" time="0.019">
-    </testcase>
-    <testcase classname="Adventure Detail Page Tests Check if bootstrap gallery is working" name="Adventure Detail Page Tests Check if bootstrap gallery is working" time="0.042">
-    </testcase>
-    <testcase classname="Adventure Detail Page Tests Check if conditional rendering is working" name="Adventure Detail Page Tests Check if conditional rendering is working" time="0.022">
-    </testcase>
-    <testcase classname="Adventure Detail Page Tests Check if reservation cost is calculated correctly and updated in DOM" name="Adventure Detail Page Tests Check if reservation cost is calculated correctly and updated in DOM" time="0.031">
-    </testcase>
-    <testcase classname="Adventure Detail Page Tests Check if reservation banner is displayed" name="Adventure Detail Page Tests Check if reservation banner is displayed" time="0.015">
-    </testcase>
-    <testcase classname="Adventure Detail Page Tests captureFormSubmit() - Makes a POST API call with correct request body" name="Adventure Detail Page Tests captureFormSubmit() - Makes a POST API call with correct request body" time="0.031">
+    <testcase classname="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" name="Adventure Page Tests generateFilterPillsAndUpdateDOM() - Sets the category filter pills correctly" time="0.009">
     </testcase>
   </testsuite>
 </testsuites>
