@@ -77,11 +77,16 @@ function addReservationToTable(reservations) {
     
 
     const actionCell = row.insertCell();
+    const buttonEl = document.createElement("button");
+    buttonEl.classList.add("reservation-visit-button");
+    buttonEl.textContent = 'Visit Adventure';
     const actionLink = document.createElement("a");
     actionLink.href = `../detail/?adventure=${reservation.adventure}`;
-    actionLink.classList.add("reservation-visit-button");
-    actionLink.textContent = "Visit Adventure";
-    actionCell.appendChild(actionLink);
+    // actionLink.classList.add("reservation-visit-button");
+    // actionLink.textContent = "Visit Adventure";
+    // actionCell.appendChild(actionLink);
+    buttonEl.append(actionLink);
+    actionCell.appendChild(buttonEl);
   });
   
 }
