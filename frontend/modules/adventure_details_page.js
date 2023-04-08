@@ -60,86 +60,31 @@ function addBootstrapPhotoGallery(images) {
   const photoGalleryEl = document.getElementById("photo-gallery");
 
   //Clear the photo gallery content
-  photoGalleryEl.innerHTML = "";
+  photoGalleryEl.innerHTML = `<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner h-100" id='carousel-item-parent'>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+  </button>
+  </div>`;
 
-  //Create coursel components
-  const carousel = document.createElement("div");
-  carousel.classList.add("carousel", "slide");
-  carousel.setAttribute("id", "carouselExampleIndicators");
-  carousel.setAttribute("data-bs-ride", "carousel");
-
-  const indicators = document.createElement("div");
-  indicators.classList.add("carousel-indicators");
-  carousel.appendChild(indicators);
-
-  const inner = document.createElement("div");
-  inner.classList.add("carousel-inner");
-  carousel.appendChild(inner);
-
-  const prevButton = document.createElement("button");
-  prevButton.classList.add("carousel-control-prev");
-  prevButton.setAttribute("type", "button");
-  prevButton.setAttribute("data-bs-target", "#carouselExampleIndicators");
-  prevButton.setAttribute("data-bs-slide", "prev");
-  carousel.appendChild(prevButton);
-
-  const prevIcon = document.createElement("span");
-  prevIcon.classList.add("carousel-control-prev-icon");
-  prevIcon.setAttribute("aria-hidden", "true");
-  prevButton.appendChild(prevIcon);
-
-  const prevLabel = document.createElement("span");
-  prevLabel.classList.add("visually-hidden");
-  prevLabel.textContent = "Previous";
-  prevButton.appendChild(prevLabel);
-
-  const nextButton = document.createElement("button");
-  nextButton.classList.add("carousel-control-next");
-  nextButton.setAttribute("type", "button");
-  nextButton.setAttribute("data-bs-target", "#carouselExampleIndicators");
-  nextButton.setAttribute("data-bs-slide", "next");
-  carousel.appendChild(nextButton);
-
-  const nextIcon = document.createElement("span");
-  nextIcon.classList.add("carousel-control-next-icon");
-  nextIcon.setAttribute("aria-hidden", "true");
-  nextButton.appendChild(nextIcon);
-
-  const nextLabel = document.createElement("span");
-  nextLabel.classList.add("visually-hidden");
-  nextLabel.textContent = "Next";
-  nextButton.appendChild(nextLabel);
+  const carouselParentId = document.getElementById("carousel-item-parent");
 
   images.forEach((image, index) => {
-    const indicator = document.createElement("button");
-    indicator.setAttribute("type", "button");
-    indicator.setAttribute("data-bs-target", "#carouselExampleIndicators");
-    indicator.setAttribute("data-bs-slide-to", index.toString());
-
-    if (index === 0) {
-      indicator.classList.add("active");
-      inner.appendChild(createCarouselItem(image, true));
-    } else {
-      inner.appendChild(createCarouselItem(image, false));
-    }
-    indicators.appendChild(indicator);
+    const carouselItemEl = document.createElement("div");
+    index === 0
+      ? carouselItemEl.classList.add("carousel-item", "active", "h-100")
+      : carouselItemEl.classList.add("carousel-item", "h-100");
+    carouselItemEl.innerHTML = `<img src='${image}' class='activity-card-image' alt='...' style='object-fit:cover'/>`;
+    carouselParentId.append(carouselItemEl);
   });
-  photoGalleryEl.appendChild(carousel);
 
-  function createCarouselItem(imageSrc, active) {
-    const item = document.createElement("div");
-    item.classList.add("carousel-item", "h-100");
-    if (active) {
-      item.classList.add("active");
-    }
-    const image = document.createElement("img");
-    image.classList.add("d-block", "w-100", "h-100");
-    image.setAttribute("style", "object-fit:cover");
-    image.setAttribute("src", imageSrc);
-    item.appendChild(image);
-
-    return item;
-  }
+  //Create coursel components
 }
 
 //Implementation of conditional rendering of DOM based on availability

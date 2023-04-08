@@ -57,7 +57,6 @@ function addReservationToTable(reservations) {
 
     const dateCell = row.insertCell();
     const date = new Date(reservation.date);
-    console.log(date);
     dateCell.textContent = `${date.getDate()}/${
       date.getMonth() + 1
     }/${date.getFullYear()}`;
@@ -73,11 +72,12 @@ function addReservationToTable(reservations) {
       year: 'numeric',
       month: 'long',
     });
-    bookingTimeCell.textContent = `${dateFormat},${value[1]}`; 
+    bookingTimeCell.textContent = `${dateFormat}, ${value[1]}`; 
     
 
     const actionCell = row.insertCell();
     const buttonEl = document.createElement("button");
+    buttonEl.setAttribute('id', reservation.id);
     buttonEl.classList.add("reservation-visit-button");
     buttonEl.textContent = 'Visit Adventure';
     const actionLink = document.createElement("a");
